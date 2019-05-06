@@ -1,0 +1,13 @@
+<div *ngIf="website">
+  <h2>{{website.title | uppercase}} Details</h2>
+  <div><span>Id: </span>{{website.id}}</div>
+  <div>
+    <p>
+		Title: {{website.title}}
+    </p>
+	<p>
+		URL: {{website.url}}
+    </p>
+  </div>
+  <button (click)="goBack()">go back</button>
+</div>

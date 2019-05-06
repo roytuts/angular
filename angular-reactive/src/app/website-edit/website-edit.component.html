@@ -1,0 +1,15 @@
+<div *ngIf="website">
+  <h2>{{website.title | uppercase}} Details</h2>
+  <div><span>Id: </span>{{website.id}}</div>
+  <div>
+    <p>
+		Title: <input [(ngModel)]="website.title" placeholder="Website Title">
+    </p>
+	<p>
+		URL: <input [(ngModel)]="website.url" placeholder="Website URL">
+    </p>
+  </div>  
+  <button (click)="goBack()">go back</button>
+  &nbsp;
+  <button (click)="save()">save</button>
+</div>

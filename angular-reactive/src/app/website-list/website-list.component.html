@@ -1,0 +1,26 @@
+<h3>Websites</h3>
+<div>
+	<a routerLink="/add">
+		Add New Wbsite
+	</a>
+</div>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>URL</th>
+	<th>Actions</th>
+  </tr>
+  <tr *ngFor="let website of websites">
+    <td>{{website.id}}</td>
+    <td>{{website.title}}</td>
+    <td>{{website.url}}</td>
+	<td>
+		<a routerLink="/detail/{{website.id}}">Detail</a>
+		&nbsp;
+		<a routerLink="/edit/{{website.id}}">Edit</a>
+		&nbsp;
+		<button title="delete website" (click)="delete(website)">x</button>
+	</td>
+  </tr>
+</table>
