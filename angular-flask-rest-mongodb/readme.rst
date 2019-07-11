@@ -1,0 +1,1 @@
+You can read tutorial https://www.roytuts.com/angular-python-flask-rest-api-mongodb-crud-example
