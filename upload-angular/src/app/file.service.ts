@@ -10,7 +10,7 @@ export class FileService {
   uploadFile(file: File): Observable<HttpEvent<{}>> {
 		const formdata: FormData = new FormData();
 		formdata.append('file', file);
-		const req = new HttpRequest('POST', 'http://localhost:9000/upload', formdata, {
+		const req = new HttpRequest('POST', 'http://localhost/php-rest-file-upload/rest_file_upload.php', formdata, {
 			  reportProgress: true,
 			  responseType: 'text'
 		});
