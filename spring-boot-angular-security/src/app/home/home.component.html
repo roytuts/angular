@@ -1,0 +1,11 @@
+<h1>Greeting</h1>
+<div [hidden]="!isLoggedin">
+	<p>Welcome back, {{ loggedinUser }}!</p>
+	<p>The ID is {{greeting.id}}</p>
+	<p>The content is {{greeting.content}}</p>
+	
+	<p><a style="text-decoration: underline; cursor: pointer;" (click)=doLogout()>Logout</a></p>
+</div>
+<div [hidden]="isLoggedin">
+	<p>Login to see your greeting</p>
+</div>
