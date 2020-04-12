@@ -1,0 +1,12 @@
+<div>
+	<div [style.color]="index==0?'#be1100':index==1?'red':index==2?'#f48771':index==3?'#b89500':'green'">
+		<ul>
+			<li *ngFor="let i of arr;let in=index" [style.color]="in>index?'gray':'inherit'" (click)="onClickItem(in)">*</li>
+		</ul>
+	</div>
+	<p style="text-align: justify;">
+		The topic of blogging seems to come up a lot in our social media training workshops. The benefits of a quality blog are obvious – fresh content is good for your readers and your rankings. Blogs are easy to set up and even easier to update. We often tell people that if they can use Microsoft Word… they can update a blog.
+
+		As easy as they are to set up, they can be difficult to maintain. A good blog is filled with relevant, timely content that is updated on a regular basis. New bloggers often start out with a bang but then fizzle out when they realize that creating content can be challenging.
+	</p>
+</div>
