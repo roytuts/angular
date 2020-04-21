@@ -1,0 +1,7 @@
+<div style="text-align:center">
+	<div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+	<div><img [src]="url" *ngIf="url"></div>
+	<p>
+		<input type="file" (change)="selectFile($event)">
+	</p>
+</div>
