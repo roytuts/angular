@@ -1,0 +1,25 @@
+<h1>Angular Check/Uncheck Individual/All Checkbox on HTML Table Rows</h1>
+
+<div *ngIf="products; else elseBlock">
+	<table class="datatable">
+		<thead>
+			<tr>
+				<th><input type="checkbox" [checked]="isAllCheckBoxChecked()" (change)="checkAllCheckBox($event)"></th>
+				<th>ID</th>
+				<th>Code</th>
+				<th>Name</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let p of products; let i=index; let odd = odd" [ngClass]="odd ? 'odd_col' : 'even_col'">
+				<td><input type="checkbox" value="{{p.id}}" [(ngModel)]="products[i].checked"></td>
+				<td>{{ p.id }}</td>
+				<td>{{ p.name }}</td>
+				<td>{{ p.code }}</td>
+				<td>{{ p.price }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<ng-template #elseBlock>No record found</ng-template>
