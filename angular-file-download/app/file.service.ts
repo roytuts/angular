@@ -9,7 +9,7 @@ export class FileService {
   constructor(private http: HttpClient) {}
 
 //downloadFile(): Observable<any> {
-		return this.http.get('http://localhost:8080/employees/download', {responseType: ResponseContentType.Blob});
+		//return this.http.get('http://localhost:8080/employees/download', {responseType: ResponseContentType.Blob});
   downloadFile(): any {
 		return this.http.get('http://localhost:8080/employees/download', {responseType: 'blob'});
   }
