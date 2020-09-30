@@ -1,0 +1,1 @@
+Tutorial can be found here https://www.roytuts.com/how-to-load-local-json-file-in-angular-application/
