@@ -1,0 +1,9 @@
+<div *ngIf="isSignedin">
+	<p>Welcome back, {{ signedinUser }}!</p>
+
+	<div *ngFor="let greet of greeting">
+		{{greet}}
+	</div>
+
+	<p><a style="text-decoration: underline; cursor: pointer;" (click)="doSignout()">Signout</a></p>
+</div>
