@@ -1,0 +1,1 @@
+Please follow the tutorial https://roytuts.com/angular-check-uncheck-individual-all-checkbox-on-html-table-rows/
