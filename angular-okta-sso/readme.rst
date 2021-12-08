@@ -1,0 +1,1 @@
+Please follow the tutorial https://roytuts.com/angular-okta-sso-single-sign-on-with-pkce/
