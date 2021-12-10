@@ -1,0 +1,29 @@
+<div>
+  <a routerLink="/website/add">
+	 Add New Website
+  </a>
+</div>
+<div *ngIf="websites.length > 0">
+  <h3>List of Websites</h3>
+  <table>
+	<tr>
+	 <th>ID</th>
+	 <th>URL</th>
+	 <th>Title</th>
+	 <th>Actions</th>
+	</tr>
+	<tr *ngFor="let website of websites">
+	 <td>{{website.id}}</td>
+	 <td>{{website.url}}</td>
+	 <td>{{website.title}}</td>
+	 <td>
+	   <a routerLink="/website/{{website.id}}/detail">Detail</a>&nbsp;
+	   <a routerLink="/website/{{website.id}}/update">Edit</a>&nbsp;
+	   <button title="delete website" (click)="delete(website)">x</button>
+	 </td>
+	</tr>
+  </table>
+</div>
+<div *ngIf="websites.length <= 0">
+  <p style="color: red">No Record Found!</p>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <h2>Add New Website Detail</h2>
+  <div>
+	<p>
+	 Title: <input [(ngModel)]="website.title" placeholder="Website Title">
+    </p>
+             
+	<p>
+	 URL: <input [(ngModel)]="website.url" placeholder="Website URL">
+    </p>
+  </div>
+  <button (click)="goBack()">Go Back</button>
+  <button (click)="save()">Save</button>
+</div>
