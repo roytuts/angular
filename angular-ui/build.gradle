@@ -1,0 +1,31 @@
+plugins {
+  id "com.moowork.node" version "1.3.1"
+}
+ 
+node {
+   /*version = 16.12.0
+   npmVersion = 8.1.0
+   download = true*/
+   workDir = file("${project.buildDir}/node")
+   nodeModulesDir = file("${project.projectDir}")
+}
+ 
+task buildApp(type: NpmTask) {
+   args = ['run', buildOption]
+}
+ 
+buildApp.dependsOn(npm_install)
+ 
+/*task clean(type: Delete){
+  delete "dist"
+}
+ 
+task cleanAll(type: Delete){
+  delete "build"
+  delete "node_modules"
+  delete ".gradle"
+  delete ".angular"
+  delete ".vscode"
+}
+ 
+cleanAll.dependsOn(clean)*/
