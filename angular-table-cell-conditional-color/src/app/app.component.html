@@ -1,0 +1,20 @@
+<table id="sales-info" border="1" cellpadding="4" cellspacing="1" style="margin: auto;">
+	<thead>
+		<tr>
+			<th>Product Id</th>
+			<th>Price</th>
+			<th>Sale Price</th>
+			<th>Sales Count</th>
+			<th>Sale Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let product of products">
+			<td [ngStyle]="{'background-color': getColor(product.id)}">{{product.id}}</td>
+			<td [ngStyle]="{'background-color': getColor(product.price)}">{{product.price}}</td>
+			<td [ngStyle]="{'background-color': getColor(product.sale_price)}">{{product.sale_price}}</td>
+			<td [ngStyle]="{'background-color': getColor(product.sales_count)}">{{product.sales_count}}</td>
+			<td>{{product.sale_date}}</td>
+		</tr>
+	</tbody>
+</table>
