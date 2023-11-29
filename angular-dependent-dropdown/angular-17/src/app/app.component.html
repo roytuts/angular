@@ -1,0 +1,29 @@
+<div class="content">
+	<h2>Cascading or Dependent Dropdown using Angular</h2>
+	
+	<div class="card-container">
+		<label>Country</label>
+		<select placeholder="Country" [(ngModel)]="selectedCountry" (change)="changeCountry($event)">
+			<option>--Choose Country--</option>
+			<option *ngFor="let country of Countries">{{country.name}}</option>
+		</select>
+	</div>
+
+	<div class="card-container">
+		<label>State</label>
+		<select placeholder="State" (change)="changeState($event)">
+			<option>--Choose State--</option>
+			<option *ngFor="let state of states">{{state.name}}</option>
+		</select>
+	</div>
+	
+	<div class="card-container">
+		<label>City</label>
+		<select placeholder="City">
+			<option>--Choose City--</option>
+			<option *ngFor="let city of cities">{{city}}</option>
+		</select>
+	</div>
+</div>
+
+<router-outlet></router-outlet>
