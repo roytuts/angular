@@ -1,1 +1,1 @@
-You can read tutorial at https://www.roytuts.com/cascading-or-dependent-dropdown-using-angular
+Please follow the tutorial at https://roytuts.com/cascading-or-dependent-dropdown-using-angular
