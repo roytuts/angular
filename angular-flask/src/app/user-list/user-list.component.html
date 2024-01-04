@@ -1,0 +1,27 @@
+<h3>Users</h3>
+<div>
+	<a routerLink="/add">
+		Add New User
+	</a>
+</div>
+<br/>
+<table cellspacing="1" cellpadding="2" border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+	<th>Actions</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+	<td>
+		<a routerLink="/detail/{{user.id}}">Detail</a>
+		 &nbsp;
+		<a routerLink="/edit/{{user.id}}">Edit</a>
+		 &nbsp;
+		<button title="delete user" (click)="delete(user)">X</button>
+	</td>
+  </tr>
+</table>
