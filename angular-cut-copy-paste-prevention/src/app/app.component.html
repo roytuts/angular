@@ -1,0 +1,37 @@
+<style>
+  main {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+
+  @media screen and (max-width: 650px) {
+    .content {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    .divider {
+      height: 1px;
+      width: 100%;
+      background: var(--red-to-pink-to-purple-horizontal-gradient);
+      margin-block: 1.5rem;
+    }
+  }
+</style>
+
+<main class="main">
+  <div class="content">
+    <label>Cut/Copy/Paste Prevention Demo:</label>
+    <p><input type="text" id="demo1" name="demo1" placeholder="Demo 1" (cut)="$event.preventDefault()" (copy)="$event.preventDefault()" (paste)="$event.preventDefault()"></p>
+    <p><input type="text" id="demo2" name="demo2" placeholder="Demo 2" (cut)="disableCut($event)" (copy)="disableCopy($event)" (paste)="disablePaste($event)"></p>
+    <p><input type="text" id="demo3" name="demo3" placeholder="Demo 3" appDisableCutCopyPaste></p>
+  </div>
+</main>
+
+<router-outlet></router-outlet>
