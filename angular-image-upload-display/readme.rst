@@ -1,1 +1,1 @@
-Tutorial can be found here https://www.roytuts.com/how-to-upload-and-display-image-using-angular/
+Please follow the tutorial https://roytuts.com/how-to-upload-and-display-image-using-angular/
