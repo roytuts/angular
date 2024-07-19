@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/angular-python-flask-rest-api-mongodb-crud-example
+Please follow the tutorial https://roytuts.com/angular-python-flask-rest-api-mongodb-crud-example
