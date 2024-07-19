@@ -1,1 +1,1 @@
-You can read tutorial https://www.roytuts.com/python-rest-flask-angularjs-crud/
+Please follow the tutorial https://roytuts.com/python-rest-flask-angularjs-crud/
