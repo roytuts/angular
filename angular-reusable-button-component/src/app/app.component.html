@@ -1,0 +1,11 @@
+<app-button label="Submit"></app-button>
+
+<app-button label="Delete" buttonType="danger" (onClick)="onDelete($event)">
+  <i class="fas fa-trash"></i>
+</app-button>
+
+<app-button label="Disabled" buttonType="secondary" [disabled]="true"></app-button>
+
+<app-button label="Special" customClass="special-button"></app-button>
+
+<router-outlet />
