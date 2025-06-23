@@ -1,0 +1,8 @@
+<button
+  [ngClass]="[buttonType, customClass]"
+  [disabled]="disabled"
+  (click)="onClickButton($event)"
+>
+  {{ label }}
+  <ng-content></ng-content>
+</button>
