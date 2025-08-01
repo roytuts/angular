@@ -1,0 +1,21 @@
+<h2>Mouse hover to highlight</h2>
+<p appHighlight>Highlight me!</p>
+<p appHighlight="blue">Hover over this text to see the highlight effect in blue.</p>
+<p appHighlight="yellow">This text will highlight in yellow on mouse hover.</p>
+
+<h3>Pick a highlight color</h3>
+<div>
+  <input type="radio" name="colors" (click)="color='green'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+
+<p [appHighlight]="color">Highlight me!</p>
+
+<h2>Tooltips</h2>
+
+<p><span appTooltip="This is a custom tooltip message.">Hover over me!</span></p>
+
+<button appTooltip="This is a tooltip on button!">Hover me</button>
+
+<router-outlet />
