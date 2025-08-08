@@ -1,0 +1,50 @@
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm)">
+  <div>
+    <label>
+      Full Name:
+      <input id="name" formControlName="name" placeholder="Full name">
+    </label>
+	<div *ngIf="registrationForm.get('name')?.invalid && (registrationForm.get('name')?.dirty || registrationForm.get('name')?.touched)">
+      Please provide a full name.
+    </div>
+  </div>
+  <div>
+    <label>
+      Email:
+      <input id="email" formControlName="email" placeholder="Your email">
+    </label>
+	<div *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+      Please provide a valid email address.
+    </div>
+  </div>
+  <div>
+    <label>
+      Address:
+      <textarea id="address" formControlName="address" placeholder="Your address"></textarea>
+    </label>
+	<div *ngIf="registrationForm.get('address')?.invalid && (registrationForm.get('address')?.dirty || registrationForm.get('address')?.touched)">
+      Address must be at least 30 characters long.
+    </div>
+  </div>
+  <div>
+    <label>
+      Country:
+      <input id="country" formControlName="country" placeholder="Your country">
+    </label>
+	<div *ngIf="registrationForm.get('country')!.invalid && (registrationForm.get('country')!.dirty || registrationForm.get('country')!.touched)">
+      Please provide country name with at least two characters.
+    </div>
+  </div>
+  <div>
+    <label>
+      Postal Code:
+      <input id="pin" formControlName="pin" placeholder="Your pin code">
+    </label>
+	<div *ngIf="registrationForm.get('pin')?.invalid && (registrationForm.get('pin')?.dirty || registrationForm.get('pin')?.touched)">
+      Please provide postal code with at least 5 digits.
+    </div>
+  </div>
+  <button type="submit" [disabled]="registrationForm.invalid">Register</button>
+</form>
+
+<router-outlet />
