@@ -1,0 +1,57 @@
+<div class="tutorial-list-container">
+  <div class="header">
+    <h1>Tutorial List</h1>
+  </div>
+
+  <!-- Tutorials table -->
+  <div class="table-container">
+    <table class="tutorials-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Content</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let t of tutorials" class="tutorial-row">
+          <td class="tutorial-id">{{ t.id }}</td>
+          <td class="tutorial-content">{{ t.content }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Show empty state if no tutorials -->
+    <div *ngIf="tutorials.length === 0" class="empty-state">
+      <div class="empty-icon">👥</div>
+      <h3>No tutorials found</h3>
+      <p>There are no tutorials to display at the moment.</p>
+    </div>
+  </div>
+
+    <!-- Pagination -->  
+	<div class="pagination-controls">
+	  <span>Page {{ currentPage + 1 }} of {{ totalPages }}</span>&nbsp;
+	  <button class="pagination-btn" (click)="goToPage(0)" [disabled]="currentPage === 0">First</button>&nbsp;
+	  <button class="pagination-btn" (click)="previousPage()" [disabled]="currentPage === 0">Previous</button>&nbsp;
+	  <button *ngFor="let page of getVisiblePages()" class="pagination-btn page-number" [class.active]="(page) === currentPage" (click)="goToPage(page)"> {{ page + 1 }} </button>&nbsp;
+	  <button class="pagination-btn" (click)="nextPage()" [disabled]="currentPage === totalPages - 1">Next</button>&nbsp;
+	  <button class="pagination-btn" (click)="goToPage(totalPages - 1)" [disabled]="currentPage === totalPages - 1">Last</button>
+	</div>
+	
+	<div class="page-size-selector">
+	  <label for="pageSize">Items per page:</label>
+	  <select 
+	    id="pageSize"
+	    (change)="changePageSize($any($event.target).value)"
+	    class="page-size-select">
+		  <option *ngFor="let size of pageSizeOptions" [value]="size" [selected]="size === itemsPerPage"> {{size}} </option>
+	  </select>
+		
+	  <label for="pageNo">Go to page:</label>
+	  <select id="pageNo" (change)="goToPage($any($event.target).value)" class="page-size-select">
+	    <option *ngFor="let page of pageNumbers" [value]="page" [selected]="page === currentPage">{{ page + 1 }}</option>
+	  </select>
+	</div>
+</div>
+
+<router-outlet />
